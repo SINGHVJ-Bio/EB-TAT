@@ -1,0 +1,43 @@
+# ENABL Biomarker/Target Analysis Tool - Data Paths Configuration
+# Paths are relative to the application root directory
+# Note: The app will start even if these files are missing and use minimal example data
+
+# Required: Differential expression data (supports CSV, TSV, RDS)
+diffgenes_path: "data/differential_expression/diff_expression_data.tsv"  # Fixed path to .tsv
+
+# Optional: Count data and metadata (supports both CSV and RDS)
+# If these files are missing, the app will use minimal example data
+count_data_path: "data/count_data/count_matrix.csv"  # .RDS or .csv
+meta_data_path: "data/metadata/metadata.csv"         # .RDS or .csv
+
+# Optional: Ordinal regression results (supports both CSV and RDS)  
+# If this file is missing, the app will use minimal example data
+ord_reg_fib_path: "data/ordinal_regression/fibrosis_ordinal_regression.csv"
+
+# Biomart and HGNC data files
+biomart_path: "data/biomart_hgnc/biomart_annot_transcripts.tsv"
+hgnc_path: "data/biomart_hgnc/hgnc_complete_set_08Dec2020.csv"
+
+# Optional: Plasma proteins (Excel format)
+bld_plasma_path: "data/plasma_proteins/blood_plasma_proteins.xlsx"
+
+# Literature trends configuration
+literature_trends:
+  disease_terms: ["fibrosis", "inflammation"]
+  years_back: 10
+  email: "vijay.s.gautam@@gmail.com"  # Required for PubMed API
+
+# Optional: Annotation data (various formats supported)
+hgnc_data_path: "data/hgnc_data/hgnc_mapping.txt"
+sp_tm_path: "data/annotation_data/sp_tm_data.csv"
+human_tf_path: "data/annotation_data/human_tf.csv"
+rec_lig_path: "data/annotation_data/receptor_ligand_pair.txt"
+secreted_path: "data/annotation_data/secreted_proteins.tsv"
+kuff_path: "data/annotation_data/kupffer_cells.tsv"
+hcc_path: "data/annotation_data/hepatocytes.tsv"
+liver_path: "data/annotation_data/liver_expression.tsv"
+hsc_path: "data/annotation_data/hsc_cells.csv"
+innatdb_path: "data/annotation_data/innate_db_genes.xls"
+
+# Optional: STRING database (RDS format)
+string_db_path: "data/string_db/string_db900.rds"
